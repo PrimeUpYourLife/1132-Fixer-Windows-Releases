@@ -10,7 +10,11 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/PrimeUpYourLife/1132-Fixer-Windows-Releases/releases/latest">Download Latest Release</a>
+  <a href="https://github.com/PrimeUpYourLife/1132-Fixer-Windows-Releases/releases/latest"><img src="https://img.shields.io/github/v/release/PrimeUpYourLife/1132-Fixer-Windows-Releases?style=flat-square&label=download&color=blue" alt="Download"></a>
+  &nbsp;
+  <a href="https://github.com/PrimeUpYourLife/1132-Fixer-Windows-Releases/blob/main/ratings.json"><img src="https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/PrimeUpYourLife/1132-Fixer-Windows-Releases/main/ratings.json&style=flat-square" alt="User Rating"></a>
+  &nbsp;
+  <img src="https://img.shields.io/github/downloads/PrimeUpYourLife/1132-Fixer-Windows-Releases/total?style=flat-square&label=downloads&color=green" alt="Downloads">
 </p>
 
 ---
@@ -25,7 +29,7 @@ Download the latest **Setup .exe** from [Releases](https://github.com/PrimeUpYou
 
 1. Run **1132 Fixer**
 2. Toggle options (Uninstall / Reinstall / Auto-launch)
-3. Press the **FIX** button
+3. Press the **FIX NOW** button
 4. Wait for completion
 5. Launch Zoom
 
@@ -33,7 +37,7 @@ The app auto-updates when new versions are available.
 
 ## Feedback
 
-Use the **Report Bug / Feedback** button in the app to submit issues and feature requests.
+Use the in-app **Report Bug / Feedback** button to rate your experience. Ratings are aggregated and displayed in the badge above in real time.
 
 ## License
 
