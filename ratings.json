@@ -1,0 +1,9 @@
+{
+  "schemaVersion": 1,
+  "label": "user rating",
+  "message": "no reviews yet",
+  "color": "lightgrey",
+  "totalReviews": 0,
+  "averages": {},
+  "lastUpdated": "2026-02-28T00:00:00Z"
+}
