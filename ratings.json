@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
   "label": "Rating",
-  "message": "No reviews yet",
-  "color": "lightgrey"
+  "message": "5.0/5 (1 reviews)",
+  "color": "brightgreen"
 }
