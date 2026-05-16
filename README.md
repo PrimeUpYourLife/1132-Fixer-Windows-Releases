@@ -6,7 +6,7 @@
 
 <p align="center">
   <strong>Fix Zoom Error 1132 device bans on Windows</strong><br>
-  Purge all Zoom database files and get back on Zoom.
+  Creates a fresh local Windows user and launches Zoom Workplace as that user.
 </p>
 
 <p align="center">
@@ -21,32 +21,35 @@
 
 ## What It Does
 
-Zoom Error 1132 is a device-level ban that persists even after uninstalling and reinstalling. This tool scans your Zoom data folders and wipes every database file so Zoom can no longer identify the device.
+Zoom Error 1132 is a device/profile-level ban that persists across reinstalls. 1132 Fixer sidesteps it by creating a separate local Windows user and launching Zoom as that user — Zoom sees a fresh identity without you touching any Zoom files.
 
 **How it works:**
 
-1. Scans `AppData\Roaming\Zoom\data` and `AppData\Local\Zoom\data`
-2. Finds all `.db`, `.enc`, `.rdb`, `.kvs`, and `.ldb` files
-3. Shows full file paths and sizes so you know exactly what will be deleted
-4. One-click deletion — files are replaced with placeholders so Zoom regenerates clean ones
-5. Zoom auto-launches after purge
+1. Creates (or resets) a local Windows user: `user1` / `user1`
+2. Adds `user1` to the local Administrators group
+3. Launches Zoom Workplace as `user1` via PowerShell `Start-Process -Credential` — no console password prompt
+4. Optionally places a one-click "Launch Zoom as user1" shortcut on your Desktop (with the 1132 Fixer icon)
+
+Re-running Fix Now is idempotent: if `user1` already exists, only the password is reset, so the profile and Zoom-as-user1 sign-in state are preserved.
 
 ## Install
 
 Download the latest **Setup .exe** from [Releases](https://github.com/PrimeUpYourLife/1132-Fixer-Windows-Releases/releases/latest).
 
-> Requires **Windows 10/11** and **Administrator** privileges.
+> Requires **Windows 10/11**, **Administrator** privileges, and Zoom Workplace installed at `C:\Program Files\Zoom\bin\Zoom.exe` (use the machine-wide installer, not the per-user one).
 
 ## Usage
 
-1. Run **1132 Fixer**
-2. Review the found database files
-3. Press **DELETE ALL FOUND FILES**
-4. Zoom launches automatically
+1. Run **1132 Fixer** (as Administrator)
+2. Read the on-screen explanation of what the fix does
+3. Press **FIX NOW**
+4. Approve any Windows permission prompts
+5. Zoom Workplace launches as `user1`
+6. Optionally create the Desktop quick-launch shortcut
 
 ## Feedback
 
-Use the in-app **Report Bug / Feedback** button to rate your experience. Ratings are aggregated and displayed in the badge above in real time.
+Use the in-app **Feedback** button to file a bug, rate your experience, or send a message. Ratings are aggregated and displayed in the badge above in real time.
 
 ## License
 
